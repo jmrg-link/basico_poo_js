@@ -48,7 +48,15 @@
   * **Encapsulamiento:** Esconder datos que solo pueden ser accedidos por la clase.
   * **Polimorfismo:** Un objeto puede comportarse de muchas formas, ejemplo: En herencia, las clases hijas pueden comportarse como su clase padre y viceversa.
 
+### Sc4: Que es un Objeto en Javascript
+* Conceptos:
+  * **Objeto:** Instanciación de una Clase, Prototipo, o Objeto Prototipo.
+  * **Prototipo:** Agrupación de métodos donde un objeto específico tiene acceso.
+  * **Objeto Prototipo:** Es un objeto omnipresente preestablecido, dando por resultado que todo objeto instanciado en javascript será heredado directa o indirectamente del Objeto Prototipo y mediante el atributo **__proto__** vamos se podrá acceder a su respectivo prototipo.
+  * En imagen podemos ver esta herencia o también llamada Prototype Chain - [ver enlace](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes) .
+  <img src="https://static.platzi.com/media/user_upload/prototype%20object-c20c05a7-da04-4c0d-b034-2816756ef0d2.jpg" alt="platzi-poo-objetos" height="300px">
 
+  ### Sc5: 
 
 ### 📘 Explicaciones de los principales paradigmas de la programacion
 #### Programación Imperativa:
