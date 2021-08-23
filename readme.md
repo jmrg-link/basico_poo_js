@@ -31,8 +31,26 @@
 ### Que es Javascript 
 * JavaScript es un lenguaje de programación orientado a objetos, aunque basado en prototipos porque los objetos están (internamente) construidos con prototipos.📌
 
-### Principales paradigmas de la programacion
 
+### Definicion Sc2: Que es Poo 
+* 📌  En la programación, existen múltiples paradigmas para resolver los algoritmos, es decir, lineamientos sobre los cuales podemos basarnos para solucionar un problema. Por ejemplo:
+
+  * Estructurado
+  * **Orientado a Objetos**
+  * Funcional
+**Nota.** Ningún paradigma es mejor que otro, son distintos enfoques, su uso depende de el contexto y de los requerimientos que necesitemos en nuestros proyectos.
+
+### Sc3: Conceptos del Poo.
+* Conceptos:
+  * **Clase:** Representación de métodos y atributos que representan a una entidad.
+  * **Objeto:** Instancia de una clase.
+  * **Herencia:** Crear nuevas clases con características similares a partir de otras.
+  * **Encapsulamiento:** Esconder datos que solo pueden ser accedidos por la clase.
+  * **Polimorfismo:** Un objeto puede comportarse de muchas formas, ejemplo: En herencia, las clases hijas pueden comportarse como su clase padre y viceversa.
+
+
+
+### 📘 Explicaciones de los principales paradigmas de la programacion
 #### Programación Imperativa:
 * Los primeros lenguajes de programación y por extensión, también los primeros programas informáticos, se basaban completamente en este enfoque, que prevé una secuencia regularizada de órdenes o instrucciones determinadas. Este paradigma de programación es la base, por ejemplo, de los veteranos lenguajes Pascal y C, así como de todos los lenguajes ensambladores, entre otros. En la programación imperativa, el centro de atención radica, entre otras cosas, en trabajar lo más cerca posible del sistema. Como consecuencia, el código de programación resultante es fácil de comprender y a la vez, muy abarcable.
 
@@ -54,18 +72,18 @@
 <img src="https://static.platzi.com/media/user_upload/modular-619bc282-c0ef-4202-9ac3-88812d0f327b.jpg" alt="platzi-poo-imperativa" height="300px">
 
 
-
 #### Programación declarativa:
 * Radica en la descripción del resultado final que se busca. Por lo tanto, en primera línea se encuentra el “qué” del resultado y no el “cómo” de los pasos que llevan a la solución, como es el caso en la programación imperativa. Esto provoca que el código de la programación declarativa sea más difícil de comprender debido al alto grado de abstracción, aunque resulta muy corto y preciso.
 
 <img src="https://static.platzi.com/media/user_upload/declaratividad-cbec0af6-2e91-4d12-8b85-074154119b95.jpg" alt="platzi-poo-imperativa" height="300px">
 
 #### Programación funcional:
-Un programa de programación funcional consta de llamadas de función concatenadas en las que cada parte del programa se interpreta como una función. En este sentido, las funciones dentro de la programación funcional pueden adoptar distintas “estructuras”. Por ejemplo, se pueden vincular entre sí como datos o se pueden utilizar en forma de parámetros. Asimismo, se pueden utilizar como resultados de función. En contraposición, el paradigma se ocupa de que no haya asignaciones independientes de valores.
+* Un programa de programación funcional consta de llamadas de función concatenadas en las que cada parte del programa se interpreta como una función. En este sentido, las funciones dentro de la programación funcional pueden adoptar distintas “estructuras”. Por ejemplo, se pueden vincular entre sí como datos o se pueden utilizar en forma de parámetros. Asimismo, se pueden utilizar como resultados de función. En contraposición, el paradigma se ocupa de que no haya asignaciones independientes de valores.
 <img src="https://static.platzi.com/media/user_upload/function-03498817-3e30-4d2c-bdb4-1875a040b8fb.jpg" alt="platzi-poo-imperativa" height="300px">
 
 #### Programación lógica:
-El paradigma de software lógico, denominado también como programación predicativa, se basa en la lógica matemática. En lugar de una sucesión de instrucciones, un software programado según este principio contiene un conjuntode principios que se pueden entender como una recopilación de hechos y suposiciones. Todas las solicitudes al programa se procesan de forma que el intérprete recurre a estos principios y les aplica reglas definidas previamente para alcanzar el resultado deseado.
+* El paradigma de software lógico, denominado también como programación predicativa, se basa en la lógica matemática. En lugar de una sucesión de instrucciones, un software programado según este principio contiene un conjuntode principios que se pueden entender como una recopilación de hechos y suposiciones. Todas las solicitudes al programa se procesan de forma que el intérprete recurre a estos principios y les aplica reglas definidas previamente para alcanzar el resultado deseado.
 
 <img src="https://static.platzi.com/media/user_upload/logica-19f3610f-91cf-4701-b42c-97fc69ad42cb.jpg" alt="platzi-poo-imperativa" height="300px">
 
+### 
