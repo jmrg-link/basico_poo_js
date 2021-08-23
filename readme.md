@@ -48,7 +48,7 @@
   * **Encapsulamiento:** Esconder datos que solo pueden ser accedidos por la clase.
   * **Polimorfismo:** Un objeto puede comportarse de muchas formas, ejemplo: En herencia, las clases hijas pueden comportarse como su clase padre y viceversa.
 
-### Sc4: Que es un Objeto en Javascript
+#### Sc4: Que es un Objeto en Javascript
 * Conceptos:
   * **Objeto:** Instanciación de una Clase, Prototipo, o Objeto Prototipo.
   * **Prototipo:** Agrupación de métodos donde un objeto específico tiene acceso.
