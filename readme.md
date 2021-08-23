@@ -112,7 +112,7 @@ console.log(obj2.c); // undefined
 ```
 En el fragmento de código anterior, la declaración **var obj2 = Object.create(obj1)** creará el objeto **obj2** con el objeto prototipo **obj1.** En otras palabras, **obj1** se convierte en el prototipo de **obj2** en lugar de Object.prototype por defecto. Como puedes ver, **obj1** es una propiedad de **obj2**, pero puedes acceder a ella a través de la cadena de prototipos. Sin embargo, para la propiedad c, se obtiene un valor undefined porque no se puede encontrar en **obj1** y en **Object.prototype.**
 
-
+#### Sc6: Clases en Javascript
 
 ### 📘 Explicaciones de los principales paradigmas de la programacion
 #### Programación Imperativa:
