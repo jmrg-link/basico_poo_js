@@ -1,248 +1,197 @@
-//Prototipe de Comment
-class Comment {
-    constructor({
-      id,
-      username,
-      info,
-    }) {
-      this.id = id;
-      this.username = username;
-      this.info = info;
+function videoPlay(id) {
+  const urlSecreta = "https://platziultrasecretomasquelanasa.com/" + id;
+  console.log("Se está reproduciendo desde la url " + urlSecreta);
+}
+function videoStop(id) {
+  const urlSecreta = "https://platziultrasecretomasquelanasa.com/" + id;
+  console.log("Pausamos la url " + urlSecreta);
+}
+
+class PlatziClass {
+  constructor({
+    name,
+    videoID,
+  }) {
+    this.name = name;
+    this.videoID = videoID;
+  }
+
+  reproducir() {
+    videoPlay(this.videoID);
+  }
+  pausar() {
+    videoStop(this.videoID);
+  }
+}
+
+class Course {
+  constructor({
+    name,
+    classes = [],
+    isFree = false,
+    lang = "spanish",
+  }) {
+    this._name = name;
+    this.classes = classes;
+    this.isFree = isFree;
+    this.lang = lang;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  set name(nuevoNombrecito) {
+    if (nuevoNombrecito === "Curso Malito de Programación Básica") {
+      console.error("Web... no");
+    } else {
+      this._name = nuevoNombrecito; 
     }
   }
-  
-  //Prototipe de BlogPost
-  class BlogPost {
-    constructor({
-      id,
-      title,
-      info,
-      comments = [],
-    }) {
-      this.id = id;
-      this.title = title;
-      this.info = info;
-      this.comments = comments;
-    }
-  
-    addComment(id, username, info) {
-      new Comment ({
-        id: id,
-        username: username,
-        info: info,
-      })
-      this.comments.push(Comment);
-    }
-  };
-  
-  const BlogDesarrollo = new BlogPost({
-    id: 0,
-    title: 'Como iniciar en el Desarrollo Web',
-    info: 'lorem ipsum',
-  })
-  
-  
-  //Prototipe de Teacher
-  class Teacher {
-    constructor({
-      name,
-      area,
-      twitter = undefined,
-      instagram = undefined,
-    }) {
-      this.name = name;
-      this.area = area;
-      this.socialMedia = {
-        twitter,
-        instagram,
-      }
-    }
-  };
-  
-  const FreddyVega = new Teacher({
-    name: 'Freddy Vega',
-    area: 'Desarrollo Web/ CEO Platzi',
-  });
-  
-  const JuanDC = new Teacher({
-    name: 'Juan David Castro',
-    area: 'Data Sciece / Desarrollo Web',
-  });
-  
-  const DiegoDegranda = new Teacher({
-    name: 'Diego De Granda',
-    area: 'Desarrollo Web',
-  });
-  
-  
-  //Prototipe de Lesson
-  class Lesson {
-    constructor({
-      id,
-      title,
-      teacher,
-      comments = [],
-    }) {
-      this.id = id;
-      this.title = title;
-      this.comments = comments;
-      this.teacher = teacher;
-    }
-  
-    addComment(id, username, info) {
-      new Comment ({
-        id: id,
-        username: username,
-        info: info,
-      })
-      this.comments.push(Comment);
-    }
+}
+
+const cursoProgBasica = new Course({
+  name: "Curso Gratis de Programación Básica",
+  isFree: true,
+});
+const cursoDefinitivoHTML = new Course({
+  name: "Curso Definitivo de HTML y CSS",
+});
+const cursoPracticoHTML = new Course({
+  name: "Curso Practico de HTML y CSS",
+  lang: "english",
+});
+
+
+class LearningPath {
+  constructor({
+    name,
+    courses = [],
+  }) {
+    this.name = name;
+    this.courses = courses;
   }
-  
-  const lesson1PB = new Lesson({
-    id: 0,
-    title: 'Clase 1 del curso de Programacion Basica',
-    teacher: FreddyVega,
-  });
-  
-  const lesson1DH = new Lesson({
-    id: 0,
-    title: 'Clase 1 del curso definitivo de HTML',
-    teacher: DiegoDegranda,
-  });
-  
-  //Prototipe de Courses
-  class Course {
-    constructor({
-      name,
-      logo = undefined,
-      info,
-      comments = [],
-      clases = [],
-    }) {
-      this.name = name;
-      this.logo = logo;
-      this.info = info;
-      this.comments = comments;
-      this.clases = clases;
-    }
-  
-    addComment(id, username, info) {
-      new Comment ({
-        id: id,
-        username: username,
-        info: info,
-      })
-      this.comments.push(Comment);
-    }
-  };
-  
-  const CursoProgBasica = new Course({
-    name: 'Curso de Programacion Basica',
-    info: 'Curso de introduccion a la programacion.',
-    clases: [lesson1PB],
-  });
-  
-  const CursoDefHTML = new Course({
-    name: 'Curso definitivo de HTML',
-    info: 'Curso completo de HTML',
-    clases: [lesson1DH],
-  });
-  
-  const CursoIntroWeb = new Course({
-    name: 'Curso de introduccion a la web',
-    info: 'Curso introductivo',
-    clases: [lesson1DH],
-  });
-  
-  const CursoPractHTML = new Course({
-    name: 'Curso Practico de HTML',
-    info: 'Curso de Practica de HTML',
-    clases: [lesson1DH],
-  });
-  
-  const CursoDataBS = new Course({
-    name: 'Curso de Data Bussines',
-    info: 'Curso completo de Data Busines',
-    clases: [lesson1DH],
-  });
-  
-  const CursoDeTB = new Course({
-    name: 'Curso de Tableau',
-    info: 'Curso de Tableau',
-    clases: [lesson1DH],
-  });
-  
-  //Prototipe de Rutas 
-  class LearningSchool {
-    constructor({
-      name,
-      logo = undefined,
-      info,
-      courses = [],
-    }) {
-      this.name = name;
-      this.logo = logo;
-      this.info = info;
-      this.courses = courses;
-    }
-  }
-  
-  const DesarrolloWeb = new LearningSchool({
-    name: 'Escuela de Desarrollo Web',
-    courses: [
-      CursoIntroWeb,
-      CursoPractHTML,
-      CursoDefHTML,
-    ],
-    info: 'Aprende desarrollo web Full Stack desde cero con HTML, CSS y JavaScript. Domina herramientas como React, Vue, Angular y backend development con Node.js.',
-  });
-  
-  const DataScience = new LearningSchool({
-    name: 'Escuela de Data Science',
-    courses: [
-      CursoDataBS,
-      CursoDeTB,
-    ],
-    info: 'Domina las herramientas y técnicas para el procesamiento de Big Data y Ciencia de Datos.',
-  });
-  
-  //Prototipe de Estudiantes
-  class Student {
-    constructor({
-      name,
-      email,
-      username,
-      twitter = undefined,
-      instagram = undefined,
-      facebook = undefined,
-      approvedCourses = [],
-      learningPaths = [],
-    }){
-      this.name = name;
-      this.email = email;
-      this.username = username;
-      this.socialMedia = {
-        twitter,
-        instagram,
-        facebook,
-      };
-      this.approvedCourses = approvedCourses;
-      this.learningPaths = learningPaths;
+}
+
+const escuelaWeb = new LearningPath({
+  name: "Escuela de Desarrollo Web",
+  courses: [
+    cursoProgBasica,
+    cursoDefinitivoHTML,
+    cursoPracticoHTML,
+  ],
+});
+
+const escuelaData = new LearningPath({
+  name: "Escuela de Data Science",
+  courses: [
+    cursoProgBasica,
+    "Curso DataBusiness",
+    "Curso Dataviz",
+  ],
+});
+
+const escuelaVgs = new LearningPath({
+  name: "Escuela de Vidweojuegos",
+  courses: [
+    cursoProgBasica,
+    "Curso de Unity",
+    "Curso de Unreal",
+  ],
+})
+class Student {
+  constructor({
+    name,
+    email,
+    username,
+    twitter = undefined,
+    instagram = undefined,
+    facebook = undefined,
+    approvedCourses = [],
+    learningPaths = [],
+  }) {
+    this.name = name;
+    this.email = email;
+    this.username = username;
+    this.socialMedia = {
+      twitter,
+      instagram,
+      facebook,
     };
-  
-    addLearningPath(nuevaEscuela) {
-      this.learningPaths.push(nuevaEscuela);
-    };
-  
-    addNewCourse(nuevoCurso) {
-      this.approvedCourses.push(nuevoCurso);
+    this.approvedCourses = approvedCourses;
+    this.learningPaths = learningPaths;
+  }
+}
+
+//! FREESTUDENT
+class FreeStudent extends Student {
+  constructor(props) {
+    super(props);
+  }
+
+  approveCourse(newCourse) {
+    if (newCourse.isFree) {
+      this.approvedCourses.push(newCourse);
+    } else {
+      console.warn("Lo sentimos, " + this.name + ", solo puedes tomar cursos abiertos");
     }
-  };
-  
-  const jesus = new Student({
-    name: 'jesus maria',
-    email: 'jrico@gmail.com',
-    username: 'jrico',
-    twitter: 'jrico'
-  });
+  }
+}
+
+//! BASICSTUDENT
+class BasicStudent extends Student {
+  constructor(props) {
+    super(props);
+  }
+
+  approveCourse(newCourse) {
+    if (newCourse.lang !== "english") {
+      this.approvedCourses.push(newCourse);
+    } else {
+      console.warn("Lo sentimos, " + this.name + ", no puedes tomar cursos en inglés");
+    }
+  }
+}
+//! EXPERTSTUDENT
+class ExpertStudent extends Student {
+  constructor(props) {
+    super(props);
+  }
+
+  approveCourse(newCourse) {
+    this.approvedCourses.push(newCourse);
+  }
+}
+
+const juan = new FreeStudent({
+  name: "Alberto",
+  username: "Alberto",
+  email: "alberto@alberto.es",
+  twitter: "albertoEs",
+  learningPaths: [
+    escuelaWeb,
+    escuelaVgs,
+  ],
+});
+
+const miguel = new BasicStudent({
+  name: "Miguel",
+  username: "migelitofeliz",
+  email: "miguel@juan.es",
+  instagram: "miguelEs",
+  learningPaths: [
+    escuelaWeb,
+    escuelaData,
+  ],
+});
+
+const jesus = new ExpertStudent({
+  name: "Jesus",
+  username: "jesuses",
+  email: "jesus@jesus.es",
+  instagram: "jesusEs",
+  learningPaths: [
+    escuelaWeb,
+    escuelaData,
+  ],
+});

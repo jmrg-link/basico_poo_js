@@ -1,32 +1,31 @@
-function videoPlay(id){
-    const urlSecreta = `https://platzi.com/secret${id}`
-    console.log(`Se esta reproducioendo desde la url ${urlSecreta}`);
-}
-function videoStop(id){
-    const urlSecreta = `https://platzi.com/secret${id}`
-    console.log(`Se esta pausando desde la url ${urlSecreta}`);
-}
-
-
-
-export class PlatziClass {
+function videoPlay(id) {
+    const urlSecreta = "https://platziultrasecretomasquelanasa.com/" + id;
+    console.log("Se está reproduciendo desde la url " + urlSecreta);
+  }
+  function videoStop(id) {
+    const urlSecreta = "https://platziultrasecretomasquelanasa.com/" + id;
+    console.log("Pausamos la url " + urlSecreta);
+  }
+  
+  export class PlatziClass {
     constructor({
-        name,
-        videoID,
-    }){
-        this.name = name
-        this.videoID = videoID
+      name,
+      videoID,
+    }) {
+      this.name = name;
+      this.videoID = videoID;
     }
-}
+  
+    reproducir() {
+      videoPlay(this.videoID);
+    }
+    pausar() {
+      videoStop(this.videoID);
+    }
+  }
 
-reproducir(){
-    videoPlay(this.videoID)
-}
-pausar(){
-    videoStop(videoStop)
-}
 
-class Course {
+  class Course {
     constructor({
       name,
       classes = [],
@@ -34,12 +33,11 @@ class Course {
       this._name = name;
       this.classes = classes;
     }
-    // llamamos al atributo name como si fuese un metodo
-    // retornasmos el metodo con this._name
+  
     get name() {
       return this._name;
     }
-    // setter: nombre del atributo recibimos el nuevo nombre
+  
     set name(nuevoNombrecito) {
       if (nuevoNombrecito === "Curso Malito de Programación Básica") {
         console.error("Web... no");

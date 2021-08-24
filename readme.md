@@ -24,13 +24,8 @@
 ## Listado de Temas del Curso: 💯
     *   Introduccion al paradigma de la Programacion orientada a objetos
 
-
-### Listado de Secciones: 🧟
-
-
 #### Que es Javascript 
 * JavaScript es un lenguaje de programación orientado a objetos, aunque basado en prototipos porque los objetos están (internamente) construidos con prototipos.📌
-
 
 #### Definicion Sc2: Que es Poo 
 * 📌  En la programación, existen múltiples paradigmas para resolver los algoritmos, es decir, lineamientos sobre los cuales podemos basarnos para solucionar un problema. Por ejemplo:
@@ -112,8 +107,13 @@ console.log(obj2.c); // undefined
 ```
 En el fragmento de código anterior, la declaración **var obj2 = Object.create(obj1)** creará el objeto **obj2** con el objeto prototipo **obj1.** En otras palabras, **obj1** se convierte en el prototipo de **obj2** en lugar de Object.prototype por defecto. Como puedes ver, **obj1** es una propiedad de **obj2**, pero puedes acceder a ella a través de la cadena de prototipos. Sin embargo, para la propiedad c, se obtiene un valor undefined porque no se puede encontrar en **obj1** y en **Object.prototype.**
 
-#### Sc6: Clases en Javascript 1-2
-#### Sc6: Clases en Javascript 2-2
+#### Sc6: Clases en Javascript 1-3
+* Ejemplo js
+#### Sc6: Clases en Javascript 2-3
+* Ejemplo js
+
+#### Sc7: Clases en Javascript 3-3
+* Ejemplo js
 #### Sc8: Abstraccion Poo js
 * Abstraccion:
 Podemos reducir la complejidad y permitir una implementación y diseño eficiente de los datos.
@@ -157,6 +157,25 @@ obj.prop = 12;
 console.log(obj.prop); //24
 
 ```
+
+#### Sc13 : Herencia
+* 📌 La herencia nos permite crear nuevas clases a partir de otras, se basa en modelos y se genera una jerarquía de padre e hijo.
+
+
+#### Sc14 : Poliformismo
+* 📌 ¿QUÉ ES EL POLIMORFISMO?
+* Es como la herencia reloaded. Es como ‘La Herencia 2.0’. Es un pilar de la OOP. Lo que es importante es lo que se puede hacer con este: Permite a nuestras subclases cambiar o anular los comportamientos de los métodos y atributos del prototipo madre, de la clase madre. Aunque herede las propiedades, el polimorfismo permite cambiar su comportamiento.
+·
+  * Tipos:
+
+    * Polimorfismo de Sobrecarga: ocurre cuando existen métodos con el mismo nombre y funcionalidad similar en clases totalmente independientes entre ellas.
+  * Polimorfismo Paramétrico: El polimorfismo paramétrico es la capacidad para definir varias funciones utilizando el mismo nombre, pero usando parámetros diferentes (nombre y/o tipo).
+  * Polimorfismo de Inclusión (JS): La habilidad para redefinir por completo el método de una superclase en una subclase.
+
+<img src="https://static.platzi.com/media/user_upload/Herencia%20-%20Figuras-84af0bbf-3587-4b6d-a5cd-9cecef206149.jpg" alt="platzi-poo-poliformismo" height="300px">
+
+---
+
 ### 📘 Explicaciones de los principales paradigmas de la programacion
 #### Programación Imperativa:
 * Los primeros lenguajes de programación y por extensión, también los primeros programas informáticos, se basaban completamente en este enfoque, que prevé una secuencia regularizada de órdenes o instrucciones determinadas. Este paradigma de programación es la base, por ejemplo, de los veteranos lenguajes Pascal y C, así como de todos los lenguajes ensambladores, entre otros. En la programación imperativa, el centro de atención radica, entre otras cosas, en trabajar lo más cerca posible del sistema. Como consecuencia, el código de programación resultante es fácil de comprender y a la vez, muy abarcable.
