@@ -112,7 +112,25 @@ console.log(obj2.c); // undefined
 ```
 En el fragmento de código anterior, la declaración **var obj2 = Object.create(obj1)** creará el objeto **obj2** con el objeto prototipo **obj1.** En otras palabras, **obj1** se convierte en el prototipo de **obj2** en lugar de Object.prototype por defecto. Como puedes ver, **obj1** es una propiedad de **obj2**, pero puedes acceder a ella a través de la cadena de prototipos. Sin embargo, para la propiedad c, se obtiene un valor undefined porque no se puede encontrar en **obj1** y en **Object.prototype.**
 
-#### Sc6: Clases en Javascript
+#### Sc6: Clases en Javascript 1-2
+#### Sc6: Clases en Javascript 2-2
+#### Sc8: Abstraccion Poo js
+* Abstraccion:
+Podemos reducir la complejidad y permitir una implementación y diseño eficiente de los datos.
+  * Ventajas de uso:
+    * Evitamos codigo duplicado, es decir, reusamos codigo.
+    * Podemos crear múltiples instancias con una sola abstracción.
+    * Al encapsular datos, los estamos protegiendo
+    * Evitamos código a bajo nivel.
+    * Podemos cambiar implementaciones en la clase, sin perjudicar su funcionamiento.
+
+#### sc9: Encapsulamiento
+* Es la forma de proteger, encapsular, guardar, limitar, esconder el acceso de ciertos atributos y propiedades de nuestros objetos.
+
+* Esto nos permite crear métodos y atributos privados. Solamente los métodos y atributos que se encuentren dentro de la clase podrán acceder a estos datos privados.
+Así, nosotros podemos prevenir la sobreescritura o alteración de métodos y atributos, de las clases, de los objetos, o los prototipos incluso, o sea las instancias creadas.
+
+  Pero… en JavaScript, el encapsulamiento no es tan posible. Porque en JS todo es público. Y aunque nos lo puede permitir, debemos tener un dominio más profundo del prototipo Object para lograrlo… otros métodos son usando getters & setters, Namespaces, Object.defineProperties, módulos de ES6.
 
 ### 📘 Explicaciones de los principales paradigmas de la programacion
 #### Programación Imperativa:
