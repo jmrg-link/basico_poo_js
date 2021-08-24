@@ -124,7 +124,7 @@ Podemos reducir la complejidad y permitir una implementación y diseño eficient
     * Evitamos código a bajo nivel.
     * Podemos cambiar implementaciones en la clase, sin perjudicar su funcionamiento.
 
-#### sc9: Encapsulamiento
+#### Sc9: Encapsulamiento
 * Es la forma de proteger, encapsular, guardar, limitar, esconder el acceso de ciertos atributos y propiedades de nuestros objetos.
 
 * Esto nos permite crear métodos y atributos privados. Solamente los métodos y atributos que se encuentren dentro de la clase podrán acceder a estos datos privados.
@@ -132,6 +132,31 @@ Así, nosotros podemos prevenir la sobreescritura o alteración de métodos y at
 
   Pero… en JavaScript, el encapsulamiento no es tan posible. Porque en JS todo es público. Y aunque nos lo puede permitir, debemos tener un dominio más profundo del prototipo Object para lograrlo… otros métodos son usando getters & setters, Namespaces, Object.defineProperties, módulos de ES6.
 
+#### Sc10: Geeters y Setters
+* Qué son los getters y setters
+Una función que obtiene un valor de una propiedad se llama getter y una que establece el valor de una propiedad se llama setter.
+
+* Esta característica a sido implementada en ES2015, pudiendo modificar el funcionamiento normal de establecer u obtener el valor de una propiedad, a estas se les conoce como accessor properties.
+
+* Funcionamiento
+En ocasiones queremos valores basados en otros valores, para esto los data accessors son bastante útiles.
+
+* Para crearlos usamos los keywords get y set
+```javascript
+const obj = {
+  get prop() {
+    return this.__prop__;
+  },
+  set prop(value) {
+    this.__prop__ = value * 2;
+  },
+};
+
+obj.prop = 12;
+
+console.log(obj.prop); //24
+
+```
 ### 📘 Explicaciones de los principales paradigmas de la programacion
 #### Programación Imperativa:
 * Los primeros lenguajes de programación y por extensión, también los primeros programas informáticos, se basaban completamente en este enfoque, que prevé una secuencia regularizada de órdenes o instrucciones determinadas. Este paradigma de programación es la base, por ejemplo, de los veteranos lenguajes Pascal y C, así como de todos los lenguajes ensambladores, entre otros. En la programación imperativa, el centro de atención radica, entre otras cosas, en trabajar lo más cerca posible del sistema. Como consecuencia, el código de programación resultante es fácil de comprender y a la vez, muy abarcable.
